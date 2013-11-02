@@ -13,7 +13,7 @@
       }
     }
   },
-  "output": "../public",
+  "output": "./public",
   "plugins": [
     "./plugins/paginator.coffee",
     "./plugins/blog.coffee"    

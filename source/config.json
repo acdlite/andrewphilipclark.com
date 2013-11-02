@@ -1,0 +1,36 @@
+{
+  "locals": {
+    "url": "http://localhost:8080",
+    "name": "Andrew Philip Clark",
+    "owner": "Andrew Clark",
+    "description": "Ramblings of an immor(t)al demigod",
+    "css_dir": "css",
+    "js_dir": "js",
+    "img_dir": "img",
+    "social": {
+      "twitter": {
+        "profile": "https://twitter.com/acdlite"
+      }
+    }
+  },
+  "output": "../public",
+  "plugins": [
+    "./plugins/paginator.coffee",
+    "./plugins/blog.coffee"    
+  ],
+  "require": {
+    "moment": "moment",
+    "_": "underscore",
+    "typogr": "typogr"
+  },
+  "jade": {
+    "pretty": true
+  },
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  },
+  "paginator": {
+    "perPage": 3
+  }
+}

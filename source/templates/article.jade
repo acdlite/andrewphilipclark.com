@@ -1,0 +1,18 @@
+
+extends layout
+
+block append vars
+  - bodyclass = 'article-detail'
+
+block prepend title
+  | #{ page.title + " | "}
+
+block content
+  article.article
+    section.content!= typogr(page.html).typogrify()
+
+block prepend contentfooter
+  div
+    span.followme You can follow me on <a href="#{locals.social.twitter.profile}">Twitter</a>.
+
+

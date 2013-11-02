@@ -14,6 +14,7 @@
     }
   },
   "output": "./public",
+  "ignore": ".DS_Store",
   "plugins": [
     "./plugins/paginator.coffee",
     "./plugins/blog.coffee"    

@@ -32,5 +32,8 @@
   },
   "paginator": {
     "perPage": 3
+  },
+  "blog": {
+    "filenameTemplate": "/:year/:month/:day/:title/index.html"
   }
 }

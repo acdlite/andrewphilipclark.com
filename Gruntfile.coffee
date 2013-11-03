@@ -1,5 +1,17 @@
 module.exports = (grunt) ->
   @initConfig
+    
+    compass:
+      options:
+        basePath: './public'
+        sassDir: 'sass'
+        cssDir: 'css'
+        require: ['susy', 'breakpoint']
+      preview:
+        outputStyle: 'expanded'
+      production:
+        outputStyle: 'compressed'
+
     extend:
       options:
         deep: true
@@ -28,14 +40,15 @@ module.exports = (grunt) ->
 
     clean:
       config: ['./config-staging.json', './config-production.json', './config-preview.json']
-      stage: ['./public']
+      staging: ['./public']
 
+  @loadNpmTasks "grunt-contrib-compass"
   @loadNpmTasks "grunt-extend"
   @loadNpmTasks "grunt-wintersmith"
   @loadNpmTasks "grunt-contrib-clean"
 
-  @registerTask 'build', ['clean:stage', 'extend:production','wintersmith:production', 'clean:config']
-  @registerTask 'stage', ['clean:stage', 'extend:staging','wintersmith:staging', 'clean:config']
+  @registerTask 'build', ['clean:staging', 'extend:production','wintersmith:production', 'clean:config']
+  @registerTask 'stage', ['clean:staging', 'extend:staging','wintersmith:staging', 'clean:config']
   @registerTask 'preview', ['extend:preview','wintersmith:preview']
   
   @registerTask 'default', ['stage']

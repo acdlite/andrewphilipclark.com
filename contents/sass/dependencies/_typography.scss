@@ -1,0 +1,59 @@
+// Vertical rhythm
+$base-font-size: 16px;
+$base-line-height: 24px;
+
+$rhythm-unit: rem;
+$rem-with-px-fallback: true;
+$round-to-nearest-half-line: true;
+
+$brand-font-size: (
+  small:                12px,
+  regular:              $base-font-size,
+  large:                24px,
+  x-large:              32px,
+  xx-large:             48px,
+  xxx-large:            64px,
+  xxxx-large:           96px
+);
+
+@function brand-font-size($size) {
+  @return map-get($brand-font-size, $size);
+}
+
+$site-font-size: (
+  text:                 brand-font-size(regular),
+  h1:                   brand-font-size(x-large),
+  h2:                   brand-font-size(large),
+  h3:                   brand-font-size(regular),
+  h4:                   brand-font-size(regular),
+  h5:                   brand-font-size(regular),
+  h6:                   brand-font-size(regular)
+);
+
+@function site-font-size($size) {
+  @return map-get($site-font-size, $size);
+}
+
+@function font-size($size) {
+  @if map-has-key($brand-font-size, $size) {
+    @return brand-font-size($size)
+  }
+  @if map-has-key($site-font-size, $size) {
+    @return site-font-size($size)
+  }
+}
+
+@mixin font-size($size) {
+  @include adjust-font-size-to(font-size($size));
+}
+
+
+// Font families
+$font-family-text: 'Georgia', serif;
+$font-family-display: 'Helvetica', sans;
+$font-family-code: 'Inconsolata', monospace;
+
+
+
+
+$indent: 2em;

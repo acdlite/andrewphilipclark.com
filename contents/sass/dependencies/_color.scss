@@ -1,0 +1,37 @@
+$brand-color: (
+  red:                  #cf383a,
+  blue:                 #1f98d4,
+  yellow:               #e4cb14,
+  white-eggshell:       #f2efe2
+);
+
+// Returns brand color
+@function brand-color($color) {
+  @return map-get($brand-color, $color);
+}
+
+$site-color: (
+  primary:              brand-color(blue),
+  secondary:            brand-color(red),
+  background:           brand-color(white-eggshell),
+  text:                 brand-color(black),
+  heading:              brand-color(black),
+  text-link:            brand-color(blue),
+  text-link-hover:      brand-color(blue)
+);
+
+// Returns site color
+@function site-color($color) {
+  @return map-get($site-color, $color);
+}
+
+// Returns either brand or site color, if it exists
+// Brand color gets precedence
+@function color($color) {
+  @if map-has-key($brand-color, $color) {
+    @return brand-color($color)
+  }
+  @if map-has-key($site-color, $color) {
+    @return site-color($color)
+  }
+}

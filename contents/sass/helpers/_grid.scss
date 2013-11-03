@@ -1,0 +1,14 @@
+.container, %container {
+  @include container(hide);
+
+  @include breakpoint($at-medium-break) {
+    @include use-grid($medium-grid) {
+      @include container(hide);
+    }
+  }
+  @include breakpoint($at-large-break) {
+    @include use-grid($large-grid) {
+      @include container(hide);
+    }
+  }
+}

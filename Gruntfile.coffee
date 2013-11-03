@@ -3,7 +3,7 @@ module.exports = (grunt) ->
     
     compass:
       options:
-        basePath: './public'
+        basePath: './contents'
         sassDir: 'sass'
         cssDir: 'css'
         require: ['susy', 'breakpoint']
@@ -43,6 +43,7 @@ module.exports = (grunt) ->
       staging: ['./public']
 
   @loadNpmTasks "grunt-contrib-compass"
+  # @loadNpmTasks "grunt-contrib-livereload"
   @loadNpmTasks "grunt-extend"
   @loadNpmTasks "grunt-wintersmith"
   @loadNpmTasks "grunt-contrib-clean"

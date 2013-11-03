@@ -1,0 +1,7 @@
+{
+  "locals": {
+    "url": "http://localhost:8080",
+    "environment": "preview"
+  },
+  "port": "8080"
+}

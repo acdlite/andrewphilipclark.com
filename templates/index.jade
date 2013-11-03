@@ -8,16 +8,16 @@ block content
           p(data-date-full=moment.utc(article.date).format('dddd, D MMMM YYYY'), data-date-medium=moment.utc(article.date).format('D MMMM YYYY')).date
             span= moment.utc(article.date).format('D MMM YY')
           h2.post-title
-            a(href=article.url)= article.title
+            a(href=h.url(article.url))= article.title
         section.content
           !{ typogr(article.html).typogrify() }
 
 block prepend contentfooter
   nav.next-previous
     if prevPage
-      a(href=prevPage.url) Newer
+      a(href=h.url(prevPage.url)) Newer
     if nextPage
-      a(href=nextPage.url) Older
+      a(href=h.url(nextPage.url)) Older
 
 
 

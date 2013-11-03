@@ -27,16 +27,15 @@ module.exports = (grunt) ->
           config: './config-preview.json'
 
     clean:
-      staging: ['./config-staging.json']
-      production: ['./config-production.json']
-      preview: ['./config-preview.json']
+      config: ['./config-staging.json', './config-production.json', './config-preview.json']
+      stage: ['./public']
 
   @loadNpmTasks "grunt-extend"
   @loadNpmTasks "grunt-wintersmith"
   @loadNpmTasks "grunt-contrib-clean"
 
-  @registerTask 'build', ['extend:production','wintersmith:production', 'clean']
-  @registerTask 'stage', ['extend:staging','wintersmith:staging', 'clean']
+  @registerTask 'build', ['clean:stage', 'extend:production','wintersmith:production', 'clean:config']
+  @registerTask 'stage', ['clean:stage', 'extend:staging','wintersmith:staging', 'clean:config']
   @registerTask 'preview', ['extend:preview','wintersmith:preview']
   
   @registerTask 'default', ['stage']

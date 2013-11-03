@@ -3,6 +3,8 @@ module.exports = (env, callback) ->
 
   defaults =
     postsDir: 'articles' # directory containing blog posts
+    template: 'article.jade'
+    filenameTemplate: '/:year/:month/:day/:file/index.html'
 
   # assign defaults for any option not set in the config file
   options = env.config.blog or {}
@@ -12,8 +14,11 @@ module.exports = (env, callback) ->
   class BlogpostPage extends env.plugins.MarkdownPage
     ### DRYer subclass of MarkdownPage ###
 
+    getTemplate: ->
+      @metadata.template or options.template or super()
+
     getFilenameTemplate: ->
-      options.filenameTemplate or super()
+      @metadata.filenameTemplate or options.filenameTemplate or super()
 
   # register the plugin
   prefix = if options.postsDir then options.postsDir + '/' else ''

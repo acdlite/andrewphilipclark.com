@@ -38,6 +38,16 @@ module.exports = (grunt) ->
           action: 'preview'
           config: './config-preview.json'
 
+    watch:
+      stylesheets:
+        files: './contents/sass/**/*.scss'
+        tasks: ['compass:preview']
+        options:
+          livereload: 1337
+
+    concurrent:
+      preview: ['watch', 'wintersmith:preview']
+
     clean:
       config: ['./config-staging.json', './config-production.json', './config-preview.json']
       staging: ['./public']
@@ -46,10 +56,11 @@ module.exports = (grunt) ->
   @loadNpmTasks "grunt-contrib-watch"
   @loadNpmTasks "grunt-extend"
   @loadNpmTasks "grunt-wintersmith"
+  @loadNpmTasks "grunt-concurrent"
   @loadNpmTasks "grunt-contrib-clean"
 
-  @registerTask 'build', ['clean:staging', 'compass:production', 'extend:production','wintersmith:production', 'clean:config']
-  @registerTask 'stage', ['clean:staging', 'compass:production', 'extend:staging','wintersmith:staging', 'clean:config']
-  @registerTask 'preview', ['extend:preview','compass:preview', 'wintersmith:preview']
+  @registerTask 'build', ['clean:staging', 'compass:production', 'extend:production', 'wintersmith:production', 'clean:config']
+  @registerTask 'stage', ['clean:staging', 'compass:production', 'extend:staging', 'wintersmith:staging', 'clean:config']
+  @registerTask 'preview', ['extend:preview', 'compass:preview', 'concurrent:preview']
   
   @registerTask 'default', ['stage']

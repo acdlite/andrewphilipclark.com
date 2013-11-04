@@ -453,7 +453,7 @@ body {
 
 /* line 19, ../sass/foundation/_site.scss */
 html {
-  background-color: #f2efe2;
+  background-color: white;
   overflow-x: hidden;
   -ms-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;

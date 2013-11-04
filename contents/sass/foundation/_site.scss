@@ -9,7 +9,7 @@
 @mixin text() {
   @include font-family(text);
   color: color(text);
-  @include font-size(text);  
+  @include font-size(text);
 }
 
 %text {

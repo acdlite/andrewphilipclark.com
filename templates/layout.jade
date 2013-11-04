@@ -18,6 +18,8 @@ html(lang='en')
         link(rel='stylesheet', href=h.stylesheet_url('main'))
       block headscripts
         script(src=h.javascript_url('head'))
+        if environment == 'preview'
+          script(src='http://localhost:1337/livereload.js')
   body(class=bodyclass)
     header.site-header
       block header

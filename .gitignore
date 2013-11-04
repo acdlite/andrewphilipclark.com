@@ -1,5 +1,7 @@
-# Ignore public directory
+# Ignore generated content
 /public
+/contents/css
+/contents/js
 
 # Node
 lib-cov

@@ -2,6 +2,15 @@
   @extend %reset-margin;
 
   @include font-family(heading);
+
+  a {
+    @extend %link-style-inverted;
+    color: color(heading-link);
+
+    &:hover {
+      color: color(heading-link-hover);
+    }
+  }
 }
 
 h1 { @include font-size(h1) };

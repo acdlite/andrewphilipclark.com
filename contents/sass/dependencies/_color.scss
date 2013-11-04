@@ -17,9 +17,11 @@ $site-color: (
   secondary:            brand-color(red),
   background:           brand-color(white),
   text:                 brand-color(black),
-  heading:              brand-color(black),
   text-link:            brand-color(blue),
-  text-link-hover:      brand-color(blue)
+  text-link-hover:      brand-color(blue),
+  heading:              brand-color(black),
+  heading-link:         brand-color(black),
+  heading-link-hover:   brand-color(blue)
 );
 
 // Returns site color

@@ -1,0 +1,25 @@
+@mixin link-style($type) {
+  @if $type == 'inverted' {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  } @else if $type == 'bare' {
+    &, &:hover {
+      text-decoration: none;
+    }
+  } @else if $type == 'normal' {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+%link-style-normal {
+  @include link-style(normal)
+}
+
+%link-style-inverted {
+  @include link-style(inverted)
+}

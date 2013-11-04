@@ -17,3 +17,6 @@ results
 
 npm-debug.log
 node_modules
+
+# Sass/Compass
+.sass-cache

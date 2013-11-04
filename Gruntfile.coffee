@@ -43,13 +43,13 @@ module.exports = (grunt) ->
       staging: ['./public']
 
   @loadNpmTasks "grunt-contrib-compass"
-  # @loadNpmTasks "grunt-contrib-livereload"
+  @loadNpmTasks "grunt-contrib-watch"
   @loadNpmTasks "grunt-extend"
   @loadNpmTasks "grunt-wintersmith"
   @loadNpmTasks "grunt-contrib-clean"
 
-  @registerTask 'build', ['clean:staging', 'extend:production','wintersmith:production', 'clean:config']
-  @registerTask 'stage', ['clean:staging', 'extend:staging','wintersmith:staging', 'clean:config']
-  @registerTask 'preview', ['extend:preview','wintersmith:preview']
+  @registerTask 'build', ['clean:staging', 'compass:production', 'extend:production','wintersmith:production', 'clean:config']
+  @registerTask 'stage', ['clean:staging', 'compass:production', 'extend:staging','wintersmith:staging', 'clean:config']
+  @registerTask 'preview', ['extend:preview','compass:preview', 'wintersmith:preview']
   
   @registerTask 'default', ['stage']

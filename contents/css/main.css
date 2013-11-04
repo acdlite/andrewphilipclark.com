@@ -441,29 +441,31 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-/* line 9, ../sass/foundation/_site.scss */
+/* line 15, ../sass/foundation/_site.scss */
 body {
   font-family: "Lato";
+  color: black;
   font-size: 16px;
   font-size: 1rem;
   line-height: 24px;
   line-height: 1.5rem;
 }
 
-/* line 15, ../sass/foundation/_site.scss */
+/* line 19, ../sass/foundation/_site.scss */
 html {
+  background-color: #f2efe2;
   overflow-x: hidden;
   -ms-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
 }
 
-/* line 27, ../sass/foundation/_site.scss */
+/* line 32, ../sass/foundation/_site.scss */
 a {
   color: #1f98d4;
   text-decoration: underline;
   cursor: pointer;
 }
-/* line 32, ../sass/foundation/_site.scss */
+/* line 37, ../sass/foundation/_site.scss */
 a:hover {
   color: #1f98d4;
   text-decoration: none;

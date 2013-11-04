@@ -2,7 +2,9 @@ $brand-color: (
   red:                  #cf383a,
   blue:                 #1f98d4,
   yellow:               #e4cb14,
-  white-eggshell:       #f2efe2
+  white-eggshell:       #f2efe2,
+  white:                #ffffff,
+  black:                #000000
 );
 
 // Returns brand color
@@ -28,10 +30,5 @@ $site-color: (
 // Returns either brand or site color, if it exists
 // Brand color gets precedence
 @function color($color) {
-  @if map-has-key($brand-color, $color) {
-    @return brand-color($color)
-  }
-  @if map-has-key($site-color, $color) {
-    @return site-color($color)
-  }
+  @return brand-color($color) or site-color($color);
 }

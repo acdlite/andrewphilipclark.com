@@ -1,5 +1,6 @@
 url = require 'url'
 path = require 'path'
+typogr = require 'typogr'
 
 module.exports = (env, callback) ->
 
@@ -29,6 +30,10 @@ module.exports = (env, callback) ->
       thePath = path.join env.locals.stylesheet_dir, setExt(p, 'css')
       console.log thePath
       helpers.url thePath
+
+    # Shortcut for typogrify
+    typogrify: (s) ->
+      typogr.typogrify s
 
   for key, value of helpers
     env.helpers[key] = value

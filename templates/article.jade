@@ -1,5 +1,6 @@
-
 extends layout
+
+include mixins/posts
 
 block append vars
   - bodyclass = 'article-detail'
@@ -8,8 +9,8 @@ block prepend title
   | #{ page.title + " | "}
 
 block content
-  article.article
-    section.content!= typogr(page.html).typogrify()
+  div.container
+    mixin article(page)
 
 block prepend contentfooter
   div

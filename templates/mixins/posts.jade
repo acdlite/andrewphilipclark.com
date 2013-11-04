@@ -1,0 +1,12 @@
+- var h = env.helpers
+
+mixin article(article)
+  article
+    article.article.intro
+      header.post-header
+        p(data-date-full=moment.utc(article.date).format('dddd, D MMMM YYYY'), data-date-medium=moment.utc(article.date).format('D MMMM YYYY')).date
+          span= moment.utc(article.date).format('D MMM YY')
+        h2.post-title
+          a(href=h.url(article.url))!= h.typogrify(article.title)
+      section.content
+        != h.typogrify(article.html)

@@ -1,9 +1,0 @@
-@mixin text() {
-  @include font-family(text);
-  color: color(text);
-  @include font-size(text);
-}
-
-%text {
-  @include text();
-}

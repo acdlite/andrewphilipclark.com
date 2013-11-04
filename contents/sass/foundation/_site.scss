@@ -20,7 +20,7 @@ body {
 }
 
 a {
-  @extend %link-style-normal;
+  @extend %link-style-inverted;
   color: color(text-link);
 
   &:hover {

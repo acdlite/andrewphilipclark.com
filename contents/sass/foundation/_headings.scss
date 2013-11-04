@@ -1,7 +1,7 @@
 #{headings()} {
   @extend %reset-margin;
 
-  font-family: $font-family-display;
+  @include font-family(heading);
 }
 
 h1 { @include font-size(h1) };

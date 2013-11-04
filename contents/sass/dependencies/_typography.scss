@@ -47,13 +47,36 @@ $site-font-size: (
   @include adjust-font-size-to(font-size($size));
 }
 
+@import url(//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
 
-// Font families
-$font-family-text: 'Georgia', serif;
-$font-family-display: 'Helvetica', sans;
-$font-family-code: 'Inconsolata', monospace;
+$brand-font-family: (
+  lato:                 'Lato'
+);
 
+@function brand-font-family($font) {
+  @return map-get($brand-font-family, $font);
+}
 
+$site-font-family: (
+  text:                 brand-font-family(lato),
+  heading:              brand-font-family(lato)
+);
 
+@function site-font-family($font) {
+  @return map-get($site-font-family, $font);
+}
+
+@function font-family($font) {
+  @if map-has-key($brand-font-family, $font) {
+    @return brand-font-family($font)
+  }
+  @if map-has-key($site-font-family, $font) {
+    @return site-font-family($font)
+  }
+}
+
+@mixin font-family($font) {
+  font-family: font-family($font);
+}
 
 $indent: 2em;

@@ -7,7 +7,7 @@
 %reset-padding { padding: 0; }
 
 %text {
-  font-family: $font-family-text;
+  @include font-family(text);
   color: color(text);
   @include font-size(text);
 }

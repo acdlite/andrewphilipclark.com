@@ -1,3 +1,4 @@
+@import url(//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
 /* ==========================================================================
    Normalize.scss settings
    ========================================================================== */
@@ -442,7 +443,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 9, ../sass/foundation/_site.scss */
 body {
-  font-family: "Georgia", serif;
+  font-family: "Lato";
   font-size: 16px;
   font-size: 1rem;
   line-height: 24px;
@@ -470,7 +471,7 @@ a:hover {
 
 /* line 1, ../sass/foundation/_headings.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica", sans;
+  font-family: "Lato";
 }
 
 /* line 7, ../sass/foundation/_headings.scss */

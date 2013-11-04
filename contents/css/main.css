@@ -423,6 +423,60 @@ table {
   border-spacing: 0;
 }
 
+/* line 7, ../sass/helpers/_helpers.scss */
+body {
+  font-family: "Lato";
+  color: black;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+}
+
+/* line 1, ../sass/helpers/_grid.scss */
+.container {
+  *zoom: 1;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 38, ../../../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.13.alpha.10/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (min-width: 600px) {
+  /* line 1, ../sass/helpers/_grid.scss */
+  .container {
+    *zoom: 1;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 38, ../../../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.13.alpha.10/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  .container:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+@media (min-width: 800px) {
+  /* line 1, ../sass/helpers/_grid.scss */
+  .container {
+    *zoom: 1;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 38, ../../../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.13.alpha.10/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  .container:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 /* line 1, ../sass/foundation/_site.scss */
 * {
   -moz-box-sizing: border-box;
@@ -441,17 +495,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-/* line 15, ../sass/foundation/_site.scss */
-body {
-  font-family: "Lato";
-  color: black;
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 24px;
-  line-height: 1.5rem;
-}
-
-/* line 19, ../sass/foundation/_site.scss */
+/* line 9, ../sass/foundation/_site.scss */
 html {
   background-color: white;
   overflow-x: hidden;
@@ -459,13 +503,13 @@ html {
   text-rendering: optimizeLegibility;
 }
 
-/* line 32, ../sass/foundation/_site.scss */
+/* line 22, ../sass/foundation/_site.scss */
 a {
   color: #1f98d4;
   text-decoration: underline;
   cursor: pointer;
 }
-/* line 37, ../sass/foundation/_site.scss */
+/* line 27, ../sass/foundation/_site.scss */
 a:hover {
   color: #1f98d4;
   text-decoration: none;
@@ -522,48 +566,4 @@ h6 {
   font-size: 1rem;
   line-height: 24px;
   line-height: 1.5rem;
-}
-
-/* line 1, ../sass/helpers/_grid.scss */
-.container {
-  *zoom: 1;
-  max-width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
-/* line 38, ../../../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.13.alpha.10/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-.container:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-@media (min-width: 600px) {
-  /* line 1, ../sass/helpers/_grid.scss */
-  .container {
-    *zoom: 1;
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  /* line 38, ../../../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.13.alpha.10/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-  .container:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-@media (min-width: 800px) {
-  /* line 1, ../sass/helpers/_grid.scss */
-  .container {
-    *zoom: 1;
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  /* line 38, ../../../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.13.alpha.10/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-  .container:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
 }

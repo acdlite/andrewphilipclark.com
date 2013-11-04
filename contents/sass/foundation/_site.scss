@@ -6,16 +6,6 @@
 %reset-border  { border: 0; }
 %reset-padding { padding: 0; }
 
-@mixin text() {
-  @include font-family(text);
-  color: color(text);
-  @include font-size(text);
-}
-
-%text {
-  @include text();
-}
-
 html {
   background-color: color(background);
   overflow-x: hidden;

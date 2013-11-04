@@ -3,14 +3,14 @@ extends layout
 include mixins/posts
 
 block append vars
-  - bodyclass = 'article-detail'
+  - bodyclass = 'post-single'
 
 block prepend title
   | #{ page.title + " | "}
 
 block content
   div.container
-    mixin article(page)
+    mixin post(page)
 
 block prepend contentfooter
   div

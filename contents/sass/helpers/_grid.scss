@@ -26,12 +26,12 @@
 .container, %container {
   @include container(hide);
 
-  @include breakpoint($at-medium-break) {
+  @include breakpoint(break(at-medium)) {
     @include use-grid(grid(medium)) {
       @include container(hide);
     }
   }
-  @include breakpoint($at-large-break) {
+  @include breakpoint(break(at-medium)) {
     @include use-grid(grid(large)) {
       @include container(hide);
     }

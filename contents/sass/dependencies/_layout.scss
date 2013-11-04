@@ -19,8 +19,20 @@ $only-medium-break: $at-medium-break $at-large-break;
 
 $not-large-break: max-width $at-large-break;
 
+$break: (
+  at-medium:                 $at-medium-break,
+  at-large:                  $at-large-break,
+  only-small:                0 $at-medium-break,
+  only-medium:               $at-medium-break $at-large-break,
+  not-large:                 max-width $at-large-break
+);
+
+@function break($b) {
+  @return map-get($break, $b);
+}
+
 // Set default grid (mobile-first)
-@include set-grid(grid(small));
+@include set-grid(map-get($grid, small));
 
 @mixin square($size: 1em) {
   width:  $size;

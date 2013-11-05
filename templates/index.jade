@@ -8,11 +8,12 @@ block content
       mixin post(article)
 
 block prepend contentfooter
-  nav.next-previous
-    if prevPage
-      a(href=h.url(prevPage.url)) Newer
-    if nextPage
-      a(href=h.url(nextPage.url)) Older
+  .container
+    nav.next-previous
+      if prevPage
+        a(href=h.url(prevPage.url)) Newer
+      if nextPage
+        a(href=h.url(nextPage.url)) Older
 
 
 

@@ -8,6 +8,16 @@
   @include text();
 }
 
+@mixin small-caps($size: font-size(small)) {
+  @include adjust-font-size-to($size);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+%small-caps {
+  @include small-caps;
+}
+
 @mixin link-style($type) {
   @if $type == 'inverted' {
     text-decoration: none;

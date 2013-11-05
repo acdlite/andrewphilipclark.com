@@ -5,7 +5,9 @@ $brand-color: (
   white:                #ffffff,
   almost-white:         #f5f6f6,
   black:                #000000,
-  almost-black:         #424242
+  almost-black:         #424242,
+  gray:                 #666666,
+  light-gray:           #adadad
 );
 
 // Returns brand color
@@ -16,8 +18,9 @@ $brand-color: (
 $site-color: (
   primary:              brand-color(blue),
   secondary:            brand-color(red),
-  background:           brand-color(almost-white),
+  background:           brand-color(white),
   text:                 brand-color(almost-black),
+  text-secondary:       brand-color(gray),
   text-link:            brand-color(blue),
   text-link-hover:      brand-color(blue),
   heading:              brand-color(almost-black),

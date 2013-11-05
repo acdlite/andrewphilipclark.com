@@ -14,5 +14,11 @@
 @import "foundation/site";
 @import "foundation/headings";
 @import "foundation/inline";
+@import "foundation/media";
 
-@import "components/content"
+@import "components/logo";
+@import "components/banner";
+@import "components/content";
+
+@import "regions/header";
+@import "regions/footer";

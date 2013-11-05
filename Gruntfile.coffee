@@ -8,6 +8,8 @@ module.exports = (grunt) ->
         basePath: './contents'
         sassDir: 'sass'
         cssDir: 'css'
+        imagesDir: 'images'
+        fontsDir: 'fonts'
         require: ['susy', 'breakpoint']
       preview:
         outputStyle: 'expanded'

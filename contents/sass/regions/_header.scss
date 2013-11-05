@@ -1,0 +1,4 @@
+.site-header > .container {
+  @include rem(border-bottom, 1px solid color(light-gray));
+  @include rem(margin-bottom, rhythm(2, $offset: 1px));
+}

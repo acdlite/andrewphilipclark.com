@@ -1,0 +1,26 @@
+$rainbow: color(red), color(blue), color(yellow), color(blue), color(red);
+$duration: length($rainbow) * 5s;
+$delay: 2s;
+
+.site-banner {
+  @include rem(height, rhythm(1));
+  display: block;
+  background: color(primary);
+  overflow: hidden;
+  position: relative;
+  @include trailer(2);
+
+  .rainbow {
+    height: 100%;
+    width: 100% * length($rainbow);
+    position: absolute;
+
+    @include background-image(linear-gradient(left, $rainbow));
+    @include animation(rainbow $duration $delay infinite alternate linear);
+  }
+}
+
+@include keyframes(rainbow) {
+  from { left: 0%; }
+  to { left: -100% * (length($rainbow) - 1) }
+}

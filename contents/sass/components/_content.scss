@@ -1,5 +1,4 @@
 .post {
-  /* Layout */
   @include breakpoint(break(large)) {
     @include use-grid(grid(large)) {
       @include container(hide);
@@ -9,9 +8,31 @@
     @include use-grid(content-grid(sidebar-left)) {
       @include container(hide);
 
-      @at-root #{&}__content, #{&}__header {
+      // TODO: improve BEM mixins to handle lists of selectors
+      @at-root #{&}__content, #{&}__title, #{&}__footer {
         @include span(last 1);
       }
+
+      @include e(date) {
+        @include span(1);
+        @include leader(0);
+      }
     }
+  }
+
+  @include e(date) {
+    @extend %small-caps;
+    color: color(text-secondary);
+  }
+
+  @include e(footer) {
+    @include leader(2);
+    font-style: italic;
+  }
+
+  // Posts that follow posts
+  & + .post {
+    // Add space between posts
+    @include leader(4);
   }
 }

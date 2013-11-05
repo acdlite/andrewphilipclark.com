@@ -1,12 +1,11 @@
 - var h = env.helpers
 
 mixin post(post)
-  article
-    article.post
-      header.post__header
-        h1.post__title
-          a(href=h.url(post.url))!= h.inlineMd(post.title)
-        p(data-date-full=moment.utc(post.date).format('dddd, D MMMM YYYY'), data-date-medium=moment.utc(post.date).format('D MMMM YYYY')).date
-          span= moment.utc(post.date).format('D MMM YY')
-      section.post__content
-        != h.typogrify(post.html)
+  article.post
+    header.post__header
+      p.post__date(data-date-full=moment.utc(post.date).format('dddd, D MMMM YYYY'), data-date-medium=moment.utc(post.date).format('D MMMM YYYY')).date
+        span= moment.utc(post.date).format('D MMM YY')
+      h1.post__title
+        a(href=h.url(post.url))!= h.inlineMd(post.title)
+    section.post__content
+      != h.typogrify(post.html)

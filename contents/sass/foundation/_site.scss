@@ -13,6 +13,10 @@ html {
   text: {
     rendering: optimizeLegibility;
   }
+
+  @include breakpoint(break(only-small)) {
+    font-size: 85%;
+  }
 }
 
 body {

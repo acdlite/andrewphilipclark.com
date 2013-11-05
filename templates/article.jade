@@ -9,11 +9,12 @@ block prepend title
   != h.inlineMd(page.title, {"sanitize": true}) + ' | '
 
 block content
-  div.container
+  .container
     mixin post(page)
 
 block prepend contentfooter
-  div
-    span.followme You can follow me on <a href="#{social.twitter.profile}">Twitter</a>.
+  .container
+    .post__footer
+      span.followme You can follow me on <a href="#{social.twitter.profile}">Twitter</a>.
 
 

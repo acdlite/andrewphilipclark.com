@@ -21,15 +21,17 @@ html(lang='en')
         if environment == 'preview'
           script(src='http://localhost:1337/livereload.js')
   body(class=bodyclass)
+    a.site-banner(href=h.url('/'))
+      .rainbow
     header.site-header
       block header
-        div.container
-          div.logo
+        .container
+          .site-logo
             h1
               a(href=h.url('/'))= name
     section.site-content
       block content
-        div.container
+        .container
           h2 Hi, everybody!
       block contentfooter
     footer.site-footer

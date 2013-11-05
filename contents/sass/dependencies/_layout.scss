@@ -11,20 +11,15 @@ $content-grid: (
 );
 
 // Breakpoint settings
-$at-medium-break: 600px;
-$at-large-break: 800px;
-
-$only-small-break: 0 $at-medium-break;
-$only-medium-break: $at-medium-break $at-large-break;
-
-$not-large-break: max-width $at-large-break;
+$medium-break: 600px;
+$large-break: 800px;
 
 $break: (
-  at-medium:                 $at-medium-break,
-  at-large:                  $at-large-break,
-  only-small:                0 $at-medium-break,
-  only-medium:               $at-medium-break $at-large-break,
-  not-large:                 max-width $at-large-break
+  medium:                    $medium-break,
+  large:                     $large-break,
+  only-small:                0 $medium-break,
+  only-medium:               $medium-break $large-break,
+  not-large:                 max-width $large-break
 );
 
 @function break($b) {

@@ -5,7 +5,7 @@ mixin post(post)
     article.post
       header.post-header
         h1.post-title
-          a(href=h.url(post.url))!= h.typogrify(post.title)
+          a(href=h.url(post.url))!= h.inlineMd(post.title)
         p(data-date-full=moment.utc(post.date).format('dddd, D MMMM YYYY'), data-date-medium=moment.utc(post.date).format('D MMMM YYYY')).date
           span= moment.utc(post.date).format('D MMM YY')
       section.content

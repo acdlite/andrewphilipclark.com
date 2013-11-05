@@ -6,7 +6,7 @@ block append vars
   - bodyclass = 'post-single'
 
 block prepend title
-  | #{ page.title + " | "}
+  != h.inlineMd(page.title, {"sanitize": true}) + ' | '
 
 block content
   div.container

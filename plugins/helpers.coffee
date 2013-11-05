@@ -1,6 +1,8 @@
 url = require 'url'
 path = require 'path'
 typogr = require 'typogr'
+marked = require 'marked'
+$ = require 'cheerio'
 
 module.exports = (env, callback) ->
 
@@ -28,12 +30,22 @@ module.exports = (env, callback) ->
     # Resolve url relative to stylesheet directory
     stylesheet_url: (p) ->
       thePath = path.join env.locals.stylesheet_dir, setExt(p, 'css')
-      console.log thePath
       helpers.url thePath
 
     # Shortcut for typogrify
     typogrify: (s) ->
       typogr.typogrify s
+
+    # Inline markdownify, with options for typogrify and sanitize
+    # TODO: make this less hacked together
+    inlineMd: (s, options = typogrify: true, sanitize: false) ->
+      s = marked(s, smartypants: true)
+      s = typogr.typogrify s if options.typogrify
+      s = $('p', s)[ if options.sanitize then 'text' else 'html' ]()
+      return s
+
+    sanitize: (s) ->
+      sanitize s
 
   for key, value of helpers
     env.helpers[key] = value

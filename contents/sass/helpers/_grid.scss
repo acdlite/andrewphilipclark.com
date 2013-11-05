@@ -31,7 +31,7 @@
       @include container(hide);
     }
   }
-  @include breakpoint(break(medium)) {
+  @include breakpoint(break(large)) {
     @include use-grid(grid(large)) {
       @include container(hide);
     }

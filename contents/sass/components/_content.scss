@@ -1,0 +1,17 @@
+.post {
+  /* Layout */
+  @include breakpoint(break(large)) {
+    @include use-grid(grid(large)) {
+      @include container(hide);
+    }
+  }
+  @include breakpoint(break(large)) {
+    @include use-grid(content-grid(sidebar-left)) {
+      @include container(hide);
+
+      @at-root #{&}__content, #{&}__header {
+        @include span(last 1);
+      }
+    }
+  }
+}

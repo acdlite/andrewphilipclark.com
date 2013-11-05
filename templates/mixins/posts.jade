@@ -3,10 +3,10 @@
 mixin post(post)
   article
     article.post
-      header.post-header
-        h1.post-title
+      header.post__header
+        h1.post__title
           a(href=h.url(post.url))!= h.inlineMd(post.title)
         p(data-date-full=moment.utc(post.date).format('dddd, D MMMM YYYY'), data-date-medium=moment.utc(post.date).format('D MMMM YYYY')).date
           span= moment.utc(post.date).format('D MMM YY')
-      section.content
+      section.post__content
         != h.typogrify(post.html)

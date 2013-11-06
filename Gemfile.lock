@@ -1,3 +1,14 @@
+GIT
+  remote: git://github.com/acdlite/compass.git
+  revision: a7d46f7660f3640234dc400584807c267b830ee7
+  branch: debug-vertical-alignment
+  specs:
+    compass (0.13.alpha.10.a7d46f7)
+      chunky_png (~> 1.2)
+      json
+      listen (~> 1.1.0)
+      sass (~> 3.3.0.rc.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -5,11 +16,6 @@ GEM
       compass (>= 0.12.1)
       sass (>= 3.2.0)
     chunky_png (1.2.9)
-    compass (0.13.alpha.10)
-      chunky_png (~> 1.2)
-      json
-      listen (~> 1.1.0)
-      sass (~> 3.3.0.rc.1)
     ffi (1.9.3)
     json (1.8.1)
     listen (1.1.6)
@@ -32,5 +38,5 @@ PLATFORMS
 
 DEPENDENCIES
   breakpoint (~> 2.0.7)
-  compass (~> 0.13.alpha.10)
+  compass!
   susy (~> 2.0.0.alpha.4)

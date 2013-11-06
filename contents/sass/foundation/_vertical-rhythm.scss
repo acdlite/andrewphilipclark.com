@@ -1,0 +1,34 @@
+$debug-vertical-alignment: false;
+$grid-color: transparentize(color(text), 0.6);
+
+@if $debug-vertical-alignment {
+  .page-wrap {
+    @include debug-vertical-alignment;
+  }
+}
+
+%rhythm-1 {
+  @include rhythm(1);
+}
+
+p {
+  @extend %rhythm-1;
+}
+
+h1 {
+  @extend %rhythm-1
+}
+
+h2 {
+  @include rhythm(1);
+}
+
+h3 {
+  @include leader(1);
+  @include trailer(1/2);
+}
+
+#{headings(4, 6)} {
+  @include trailer(1);
+  @include rhythm(0);
+}

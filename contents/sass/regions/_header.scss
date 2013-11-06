@@ -4,3 +4,11 @@
     @include rem(margin-bottom, rhythm(2, $offset: 1px));
   }
 }
+
+.site-logo {
+  float: left;
+}
+
+.site-byline {
+  float: right;
+}

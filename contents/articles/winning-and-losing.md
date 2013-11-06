@@ -1,6 +1,6 @@
 ---
 title: "'Winning' and 'losing'"
-date: 2013-05-24
+date: 2013 May 24 CDT
 ---
 
 A recurring argument in tech commentary is whether market share or profit share is a better indicator of success in the mobile industry. If it's market share, then Android is winning, because Android runs on way more phones than iOS. If it's profit share, then iOS is winning, because iPhones generate way more profit than Android phones. This is an important debate because... well actually I have no idea.

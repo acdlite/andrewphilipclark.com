@@ -1,20 +1,16 @@
 .post {
+  @extend %clear-fix;
+
   @include breakpoint(break(large)) {
     @include use-grid(grid(large)) {
-      @include container(hide);
-    }
-  }
-  @include breakpoint(break(large)) {
-    @include use-grid(content-grid(sidebar-left)) {
-      @include container(hide);
 
       // TODO: improve BEM mixins to handle lists of selectors
       @at-root #{&}__content, #{&}__title, #{&}__footer {
-        @include span(last 1);
+        @include span(last 9);
       }
 
       @include e(date) {
-        @include span(1);
+        @include span(3);
         @include leader(0);
       }
     }

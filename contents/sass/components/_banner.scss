@@ -8,7 +8,7 @@ $delay: 2s;
   background: color(primary);
   overflow: hidden;
   position: relative;
-  @include trailer(2);
+  @include trailer(3);
 
   .rainbow {
     height: 100%;

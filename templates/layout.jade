@@ -21,22 +21,26 @@ html(lang='en')
         if environment == 'preview'
           script(src='http://localhost:1337/livereload.js')
   body(class=bodyclass)
-    a.site-banner(href=h.url('/'))
-      .rainbow
-    header.site-header
-      block header
-        .container
-          .site-logo
-            h1
-              a(href=h.url('/'))= name
-    section.site-content
-      block content
-        .container
-          h2 Hi, everybody!
-      block contentfooter
-    footer.site-footer
-      block footer
-      block footerscripts
-        script(src=h.javascript_url('footer'))
+    .page-wrap
+      a.site-banner(href=h.url('/'))
+        .rainbow
+      header.site-header
+        block header
+          .container
+            .site-logo
+              h1
+                a(href=h.url('/'))= name
+      section.site-content
+        block content
+          .container
+            h2 Hi, everybody!
+        block contentfooter
 
+      footer.site-footer  
+        block footer
+        block footerscripts
+          script(src=h.javascript_url('footer'))
+    .sticky-footer
+      a.site-banner(href=h.url('/'))
+        .rainbow
 

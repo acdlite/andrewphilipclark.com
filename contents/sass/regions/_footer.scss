@@ -1,3 +1,7 @@
 .site-footer {
   @include leader(3);
 }
+
+.sticky-footer {
+  background: color(background-inverted);
+}

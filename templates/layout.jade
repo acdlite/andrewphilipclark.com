@@ -22,8 +22,6 @@ html(lang='en')
           script(src='http://localhost:1337/livereload.js')
   body(class=bodyclass)
     .page-wrap
-      a.site-banner(href=h.url('/'))
-        .rainbow
       header.site-header
         block header
           .container
@@ -32,6 +30,8 @@ html(lang='en')
                 a(href=h.url('/'))= name
             .site-byline
               p By Andrew Clark
+          a.site-banner(href=h.url('/'))
+            .rainbow
       section.site-content
         block content
           .container
@@ -43,6 +43,3 @@ html(lang='en')
         block footerscripts
           script(src=h.javascript_url('footer'))
     .sticky-footer
-      a.site-banner(href=h.url('/'))
-        .rainbow
-

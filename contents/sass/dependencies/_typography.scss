@@ -42,7 +42,7 @@ $site-font-size: (
   @include adjust-font-size-to(font-size($size));
 }
 
-@import url(//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@import url(//fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic,900italic);
 
 $brand-font-family: (
   lato:                 'Lato'

@@ -26,9 +26,17 @@
     font-style: italic;
   }
 
+  @include e(title) {
+    @include leader(0);
+  }
+
   // Posts that follow posts
   & + .post {
     // Add space between posts
     @include leader(4);
+  }
+
+  *:first-child {
+    @include leader(0);
   }
 }

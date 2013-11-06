@@ -2,10 +2,6 @@
 
 @include establish-baseline;
 
-%reset-margin  { margin: 0; }
-%reset-border  { border: 0; }
-%reset-padding { padding: 0; }
-
 html {
   background-color: color(background);
   overflow-x: hidden;
@@ -16,18 +12,5 @@ html {
 
   @include breakpoint(break(only-small)) {
     font-size: 85%;
-  }
-}
-
-body {
-  @extend %text;
-}
-
-a {
-  @extend %link-style-inverted;
-  color: color(text-link);
-
-  &:hover {
-    color: color(text-link-hover);
   }
 }

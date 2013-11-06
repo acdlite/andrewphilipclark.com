@@ -33,3 +33,7 @@ $break: (
   width:  $size;
   height: $size;
 }
+
+%reset-margin  { margin: 0; }
+%reset-border  { border: 0; }
+%reset-padding { padding: 0; }

@@ -1,6 +1,6 @@
 // Sticky footer
 
-$footer-height: rhythm(1);
+$footer-height: rhythm(2);
 
 html, body {
   height: 100%;
@@ -17,8 +17,4 @@ html, body {
 
 .sticky-footer, .page-wrap:after {
   height: $footer-height; 
-}
-
-.sticky-footer {
-  background: color(primary);
 }

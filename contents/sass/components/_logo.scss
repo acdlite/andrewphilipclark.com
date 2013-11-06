@@ -8,12 +8,12 @@
   height: 0;
   @include padding-leader($rhythm-height);
   @include rem(width, rhythm($rhythm-height) * $ratio);
-  background: image-url("logo.svg") {
+  background: image-url("logo-white.svg") {
     size: contain;
     repeat: no-repeat;
   }
 
-  @include opacity(0.7);
+  @include opacity(0.8);
 
   &:hover {
     @include opacity(1);

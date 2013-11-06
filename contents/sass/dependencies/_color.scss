@@ -5,9 +5,11 @@ $brand-color: (
   white:                #ffffff,
   almost-white:         #f5f6f6,
   black:                #000000,
-  almost-black:         #424242,
+  almost-black:         #222222,
   gray:                 #666666,
-  light-gray:           #adadad
+  light-gray:           #adadad,
+  very-light-gray:      #e1e1e1,
+  dark-gray:            #424242
 );
 
 // Returns brand color
@@ -18,14 +20,17 @@ $brand-color: (
 $site-color: (
   primary:              brand-color(blue),
   secondary:            brand-color(red),
-  background:           brand-color(white),
-  text:                 brand-color(almost-black),
+  background:           brand-color(almost-white),
+  text:                 brand-color(dark-gray),
   text-secondary:       brand-color(gray),
   text-link:            brand-color(blue),
   text-link-hover:      brand-color(blue),
-  heading:              brand-color(almost-black),
-  heading-link:         brand-color(almost-black),
-  heading-link-hover:   brand-color(blue)
+  heading:              brand-color(dark-gray),
+  heading-link:         brand-color(dark-gray),
+  heading-link-hover:   brand-color(blue),
+
+  background-inverted:  brand-color(almost-black),
+  text-inverted:        brand-color(very-light-gray)
 );
 
 // Returns site color

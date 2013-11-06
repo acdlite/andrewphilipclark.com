@@ -4,7 +4,7 @@
   @include font-family(heading);
 
   a {
-    @extend %link-decoration-inverted;
+    @extend %link-decoration-none;
     @include link-color(color(heading-link), color(heading-link-hover));
   }
 }

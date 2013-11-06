@@ -1,4 +1,8 @@
-* { @include box-sizing(border-box); }
+* {
+  @include box-sizing(border-box);
+
+  @include selection(color(background-inverted), color(text-inverted));
+}
 
 @include establish-baseline;
 

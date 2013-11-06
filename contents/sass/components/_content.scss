@@ -33,7 +33,7 @@
   // Posts that follow posts
   & + .post {
     // Add space between posts
-    @include leader(4);
+    @include leader(3);
   }
 
   *:first-child {

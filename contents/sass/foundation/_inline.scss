@@ -33,7 +33,7 @@
     &:hover {
       text-decoration: none;
     }
-  } @else if $type == 'normal' {
+  } @else if $type == 'none' {
     text-decoration: none;
     &:hover {
       text-decoration: none;

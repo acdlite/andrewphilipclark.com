@@ -15,5 +15,8 @@
 }
 
 .site-byline {
+  @extend %small-caps;
+
+  font-weight: 900;
   float: right;
 }

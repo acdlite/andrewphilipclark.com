@@ -1,5 +1,5 @@
 ---
-title: Andrew tries the blogging thing, take 4 (Or is it five?)
+title: Andrew tries the blogging thing, take four (Or is it five?)
 date: 6 November 2013 EST
 ---
 

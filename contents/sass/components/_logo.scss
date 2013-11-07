@@ -1,21 +1,32 @@
-.site-logo a {
-  $ratio: 174 / 93;
-  $rhythm-height: 1;
+.site-logo {
+  @include padding-leader(1);
+  @include padding-trailer(1);
 
-  @extend %reset-margin;
-  display: block;
-  overflow: hidden;
-  height: 0;
-  @include padding-leader($rhythm-height);
-  @include rem(width, rhythm($rhythm-height) * $ratio);
-  background: image-url("logo-white.svg") {
-    size: contain;
-    repeat: no-repeat;
+  float: left;
+  
+  h1 {
+    @extend %reset-margin;
   }
 
-  @include opacity(0.8);
+  a {
+    $ratio: 174 / 93;
+    $rhythm-height: 1;
 
-  &:hover {
-    @include opacity(1);
+    @extend %reset-margin;
+    display: block;
+    overflow: hidden;
+    height: 0;
+    @include padding-leader($rhythm-height);
+    @include rem(width, rhythm($rhythm-height) * $ratio);
+    background: image-url("logo-white.svg") {
+      size: contain;
+      repeat: no-repeat;
+    }
+
+    @include opacity(0.8);
+
+    &:hover {
+      @include opacity(1);
+    }
   }
 }

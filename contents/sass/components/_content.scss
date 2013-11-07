@@ -3,23 +3,34 @@
   @include padding-trailer(3);
 }
 
-.post {
-  @extend %clear-fix;
+@include breakpoint(break(large)) {
+  @include use-grid(grid(large)) {
 
-  @include breakpoint(break(large)) {
-    @include use-grid(grid(large)) {
+    %content-container--primary {
+      @include span(last 9);
+    }
 
-      // TODO: improve BEM mixins to handle lists of selectors
-      @at-root #{&}__content, #{&}__title, #{&}__footer {
-        @include span(last 9);
-      }
-
-      @include e(date) {
-        @include span(3);
-        @include leader(0);
-      }
+    %content-container--secondary {
+      @include span(3);
     }
   }
+
+  .post {
+    // TODO: improve BEM mixins to handle lists of selectors
+    @at-root #{&}__content, #{&}__title, #{&}__footer {
+      @extend %content-container--primary;
+    }
+    
+
+    @include e(date) {
+      @extend %content-container--secondary;
+      @include leader(0);
+    }
+  }
+}
+
+.post {
+  @extend %clear-fix;
 
   @include e(date) {
     @extend %small-caps;
@@ -44,5 +55,28 @@
 
   *:first-child {
     @include leader(0);
+  }
+}
+
+.next-previous {
+  @extend %content-container--primary;
+  @include leader(2);
+
+  @extend %small-caps;
+  a {
+    @extend %link-decoration-none;
+    @include link-colors(inherit, color(almost-black));
+  }
+  
+  ul {
+    @extend %inline-list;
+  }
+
+  .next {
+    float: right;
+  }
+
+  .previous {
+    float: left;
   }
 }

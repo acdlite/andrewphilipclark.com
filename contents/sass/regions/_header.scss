@@ -8,15 +8,19 @@
   }
 }
 
-.site-logo {
-  float: left;
-}
-
 .site-byline {
   float: right;
+
+  p {
+    @extend %reset-margin;
+  }
 
   a {
     @extend %small-caps;
     font-weight: 900;
   }
+}
+
+.site-byline {
+  @include adjust-leading-to(3);
 }

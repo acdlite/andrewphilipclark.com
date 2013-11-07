@@ -10,10 +10,13 @@ block content
 block prepend contentfooter
   .container
     nav.next-previous
-      if prevPage
-        a(href=h.url(prevPage.url)) Newer
-      if nextPage
-        a(href=h.url(nextPage.url)) Older
+      ul
+        if nextPage
+          li.previous
+            a(href=h.url(nextPage.url)) Older
+        if prevPage
+          li.next
+            a(href=h.url(prevPage.url)) Newer
 
 
 

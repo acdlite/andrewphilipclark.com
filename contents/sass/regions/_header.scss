@@ -1,11 +1,9 @@
 .site-header {
   background: color(background-inverted);
-  @include trailer(3);
-
   color: color(text-inverted);
 
   a {
-    @extend %link-decoration-inverted;
+    @extend %link-decoration-none;
     @include link-colors(color(text-inverted), color(white));
   }
 }
@@ -15,8 +13,10 @@
 }
 
 .site-byline {
-  @extend %small-caps;
-
-  font-weight: 900;
   float: right;
+
+  a {
+    @extend %small-caps;
+    font-weight: 900;
+  }
 }

@@ -2,6 +2,8 @@
   
   color: color(text-inverted);
 
+  @include rhythm(1/2);
+
   @include e(navigation) {
     ul {
       @extend %inline-list;
@@ -21,8 +23,5 @@
 
 .sticky-footer {
   @extend %clear-fix;
-  @include leader(3);
-  @include padding-leader(1/2);
-  @include padding-trailer(1/2);
   background: color(background-inverted);
 }

@@ -29,7 +29,8 @@ html(lang='en')
               h1
                 a(href=h.url('/'))= name
             .site-byline
-              p By Andrew Clark
+              p by 
+                a(href=(h.url('/hi'))) Andrew Clark
           a.site-banner(href=h.url('/'))
             .rainbow
       section.site-content
@@ -39,6 +40,8 @@ html(lang='en')
         block contentfooter
 
     .sticky-footer
+      a.site-banner(href=h.url('/'))
+        .rainbow
       footer.site-footer.container 
         block footer
           include footer

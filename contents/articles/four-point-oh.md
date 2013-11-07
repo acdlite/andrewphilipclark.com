@@ -5,7 +5,7 @@ date: 6 November 2013 EST
 
 So it turns out if I go more than a year without completely remaking my blog, I get bored.
 
-This site began as a Tumblr blog. I switched to WordPress shortly after, and then eventually moved on to a [Jekyll](http://jekyllrb.com)-powered static site. I was quite happy with my Jekyll setup, but it was getting... stale. I'm ready to try something new.
+It began as a Tumblr blog. I switched to WordPress shortly after, and then eventually moved on to a [Jekyll](http://jekyllrb.com)-powered static site. I was quite happy with my Jekyll setup, but it was getting... stale. I'm ready to try something new.
 
 There are two primary reasons for this site's existence. First, as a web developer who still has much to learn, I'm always eager to experiment with new techniques and tools. This site has been a great sandbox for me to play in. Now in its fourth iteration, it is built using [Wintersmith](http://wintersmith.io), a static-site generator powered by Node.js. Other tools include:
 
@@ -13,12 +13,12 @@ There are two primary reasons for this site's existence. First, as a web develop
 * [Compass](http://compass-style.org), a Sass stylesheet framework.
 * [Susy](http://susy.oddbird.net), a Compass plugin for responsive grids.
 * [CoffeeScript](http://coffeescript.org), a programming language that compiles to JavaScript.
-* [Grunt](http://gruntjs.com), a task runner for JavaScript
-* [Git](http://git-scm.com), for version control
+* [Grunt](http://gruntjs.com), a task runner for JavaScript.
+* [Git](http://git-scm.com), for version control.
 
 You can check out the source code at this site's [GitHub](https://github.com/acdlite/andrewphilipclark.com) repo.
 
-The second reason that it gives a place to write. Writing is a valuable, oft under-appreciated skill and one that I'm always hoping to improve. I'm not a great writer by any means, but I enjoy having a place to verbally express my ideas.
+The second reason is that it gives me a place to write. Writing is a valuable, oft under-appreciated skill and one that I'm always hoping to improve. I'm not a great writer by any means, but I enjoy having a place to verbally express my ideas.
 
 A curation note: I haven't fully transitioned all my old posts to this new set-up. This is partly a technical issue. For example, many of my old posts used Markdown Extra-style footnotes, but Wintersmith generates Markdown with [marked.js](https://github.com/chjj/marked), which doesn't support footnotes. This is a fixable problem though a problem still.
 

@@ -23,4 +23,4 @@ Check out the source code at this site's [GitHub](https://github.com/acdlite/and
 
 ## License
 
-You're welcome to reuse/repuporse/steal any of the code, but the content and images is under the [MIT license](http://opensource.org/licenses/MIT). No touching.
+You're welcome to reuse/repuporse/steal any of the code, but the content and images are under the [MIT license](http://opensource.org/licenses/MIT). No touching.

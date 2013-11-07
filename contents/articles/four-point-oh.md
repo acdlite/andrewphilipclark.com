@@ -7,7 +7,7 @@ So it turns out if I go more than a year without completely remaking my blog, I 
 
 This site began as a Tumblr blog. I switched to WordPress shortly after, and then eventually moved on to a [Jekyll](http://jekyllrb.com)-powered static site. I was quite happy with my Jekyll setup, but it was getting... stale. I'm ready to try something new.
 
-There are two primary reasons for this site's existence. First, as a web developer who still has much to learn, I'm always eager to experiment with new techniques and tools. This site has been a great sandbox for me to play in. Now in its fourth iteration, it is built using Wintersmith, a static-site generator powered by Node.js. Other tools include:
+There are two primary reasons for this site's existence. First, as a web developer who still has much to learn, I'm always eager to experiment with new techniques and tools. This site has been a great sandbox for me to play in. Now in its fourth iteration, it is built using [Wintersmith](http://wintersmith.io), a static-site generator powered by Node.js. Other tools include:
 
 * [Sass](http://sass-lang.com), a CSS extension language and pre-processor.
 * [Compass](http://compass-style.org), a Sass stylesheet framework.

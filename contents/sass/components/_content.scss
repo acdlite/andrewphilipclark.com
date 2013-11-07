@@ -17,7 +17,7 @@
 
   .post {
     // TODO: improve BEM mixins to handle lists of selectors
-    @at-root #{&}__content, #{&}__title, #{&}__footer {
+    @at-root .post__content, .post__title, .post__footer, .page__content, .page__title, .page__footer {
       @extend %content-container--primary;
     }
     
@@ -29,33 +29,33 @@
   }
 }
 
-.post {
+.post, .page {
   @extend %clear-fix;
 
-  @include e(date) {
+  @at-root .post__date, .page__date {
     @extend %small-caps;
     @include padding-leader(1/2);
     color: color(text-secondary);
   }
 
-  @include e(footer) {
+  @at-root .post__footer, .page__footer {
     @include leader(2);
     font-style: italic;
   }
 
-  @include e(title) {
+  @at-root .post__title, .page__title {
     @include leader(0);
-  }
-
-  // Posts that follow posts
-  & + .post {
-    // Add space between posts
-    @include leader(3);
   }
 
   *:first-child {
     @include leader(0);
   }
+}
+
+.post + .post {
+  // Posts that follow posts
+  // Add space between posts
+  @include leader(3);
 }
 
 .next-previous {

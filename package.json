@@ -4,7 +4,8 @@
     "underscore": "1.4.x",
     "typogr": "0.5.x",
     "url": "~0.7.9",
-    "marked": "~0.2.10"
+    "marked": "~0.2.10",
+    "grunt-s3-sync": "~0.4.1"
   },
   "repository": "none",
   "devDependencies": {

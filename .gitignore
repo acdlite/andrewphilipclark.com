@@ -1,5 +1,6 @@
 # Ignore generated content
 /public
+/deploy
 /contents/css
 /contents/js
 
@@ -22,3 +23,6 @@ node_modules
 
 # Sass/Compass
 .sass-cache
+
+# AWS keys
+grunt-aws.json

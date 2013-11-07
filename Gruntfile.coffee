@@ -1,5 +1,7 @@
 'use strict'
 
+path = require 'path'
+
 module.exports = (grunt) ->
   @initConfig
     
@@ -56,14 +58,36 @@ module.exports = (grunt) ->
       config: ['./config-staging.json', './config-production.json', './config-preview.json']
       staging: ['./public']
 
+    aws: grunt.file.readJSON 'grunt-aws.json'
+    's3-sync':
+      options:
+        key: '<%= aws.key %>'
+        secret: '<%= aws.secret %>'
+        bucket: '<%= aws.bucket %>'
+      deploy:
+        files: [
+          {
+            root: path.join __dirname, 'deploy'
+            src: ['deploy/**', 'deploy/images/**']
+            dest: '/'
+          },
+          {
+            root: path.join __dirname, 'deploy'
+            src: 'deploy/images/**'
+            dest: 'images/'
+          }
+        ]
+
+
   @loadNpmTasks "grunt-contrib-compass"
   @loadNpmTasks "grunt-contrib-watch"
   @loadNpmTasks "grunt-extend"
   @loadNpmTasks "grunt-wintersmith"
   @loadNpmTasks "grunt-concurrent"
   @loadNpmTasks "grunt-contrib-clean"
+  @loadNpmTasks "grunt-s3-sync"
 
-  @registerTask 'build', ['clean:staging', 'compass:production', 'extend:production', 'wintersmith:production', 'clean:config']
+  @registerTask 'deploy', ['clean:staging', 'compass:production', 'extend:production', 'wintersmith:production', 'clean:config', 's3-sync:deploy']
   @registerTask 'stage', ['clean:staging', 'compass:production', 'extend:staging', 'wintersmith:staging', 'clean:config']
   @registerTask 'preview', ['extend:preview', 'compass:preview', 'concurrent:preview']
   

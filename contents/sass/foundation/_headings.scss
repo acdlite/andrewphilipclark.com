@@ -5,14 +5,13 @@
 
   a {
     @extend %link-decoration-none;
-    @include link-color(color(heading-link), color(heading-link-hover));
+    @include link-colors(color(heading-link), color(heading-link-hover));
   }
 }
 
 h1 { 
   @include font-size(h1);
   @include trailer(1);
-  color: color(black);
   font-weight: 900;
 }
 h2 { 

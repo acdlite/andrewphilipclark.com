@@ -1,0 +1,16 @@
+extends layout
+
+block append vars
+  - bodyclass = 'page'
+
+block prepend title
+  != h.inlineMd(page.title, {"sanitize": true}) + ' | '
+
+block content
+  .container
+    article.page
+      header.page__header
+        h1.page__title
+          a(href=h.url(page.url))!= h.inlineMd(page.title)
+      section.page__content
+        != h.typogrify(page.html)

@@ -7,7 +7,7 @@ hr {
     @include rem(top, $height solid $color);
   }
   @include rem(margin-top, rhythm(2, $offset: $height));
-  @include trailer(2);
+  @include trailer(5/2);
   position: relative;
 
   &:after {

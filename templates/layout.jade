@@ -38,8 +38,9 @@ html(lang='en')
             h2 Hi, everybody!
         block contentfooter
 
-      footer.site-footer  
-        block footer
-        block footerscripts
-          script(src=h.javascript_url('footer'))
     .sticky-footer
+      footer.site-footer.container 
+        block footer
+          include footer
+    block footerscripts
+      script(src=h.javascript_url('footer'))

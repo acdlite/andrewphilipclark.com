@@ -1,7 +1,28 @@
 .site-footer {
-  @include leader(3);
+  
+  color: color(text-inverted);
+
+  @include e(navigation) {
+    ul {
+      @extend %inline-list;
+
+      li {
+        margin-right: $indent;
+      }
+    }
+
+    a {
+      @extend %link-decoration-none;
+
+      @include link-colors(inherit, color(white));
+    }
+  }
 }
 
 .sticky-footer {
+  @extend %clear-fix;
+  @include leader(3);
+  @include padding-leader(1/2);
+  @include padding-trailer(1/2);
   background: color(background-inverted);
 }

@@ -18,6 +18,7 @@
 
   @include e(date) {
     @extend %small-caps;
+    @include padding-leader(1/2);
     color: color(text-secondary);
   }
 

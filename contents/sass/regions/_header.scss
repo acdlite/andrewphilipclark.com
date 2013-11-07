@@ -1,12 +1,12 @@
 .site-header {
   background: color(background-inverted);
-  @include trailer(2);
+  @include trailer(3);
 
   color: color(text-inverted);
 
   a {
     @extend %link-decoration-inverted;
-    @include link-color(color(text-inverted), color(white));
+    @include link-colors(color(text-inverted), color(white));
   }
 }
 

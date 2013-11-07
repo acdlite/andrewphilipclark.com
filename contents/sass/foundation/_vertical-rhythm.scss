@@ -1,5 +1,10 @@
 $debug-vertical-alignment: false;
-$grid-color: transparentize(color(text), 0.6);
+
+// Returns whitespace between lines
+// Assumes rems
+@function line-leader($line-height: $base-line-height, $font-size: $base-font-size) {
+  @return convert-length($base-line-height - $base-font-size, rem) / 2;
+}
 
 @if $debug-vertical-alignment {
   .page-wrap {
@@ -11,16 +16,22 @@ $grid-color: transparentize(color(text), 0.6);
   @include rhythm(1);
 }
 
-p {
+p, ul, ol {
   @extend %rhythm-1;
+
+  #{headings()} + & {
+    @include leader(0);
+  }
 }
 
 h1 {
-  @extend %rhythm-1
+  @include leader(3/2);
+  @include trailer(1);
 }
 
 h2 {
-  @include rhythm(1);
+  @include leader(3/2);
+  @include trailer(1);
 }
 
 h3 {
@@ -31,4 +42,42 @@ h3 {
 #{headings(4, 6)} {
   @include trailer(1);
   @include rhythm(0);
+}
+
+// Adjust vertical position of elements so that their baselines align to grid
+// First adjust the main content container
+// Then adjust elements inside that container using the main adjustment as context
+@mixin adjust-vertical-alignment($adjustment, $context: 0) {
+  position: relative;
+  @include rem(bottom, (-1 * $context) + $adjustment);
+}
+
+$content-adjustment: 8px;
+.site-content {
+  @include adjust-vertical-alignment($content-adjustment);
+
+  $content-adjustments: (
+    h1:                                       5px,
+    h2:                                       10px,
+    ".post__date":                            7px,
+    "img, code, hr":                          0
+  );
+
+  @each $selector, $adjustment in $content-adjustments {
+    #{$selector} {
+      @include adjust-vertical-alignment($adjustment, $content-adjustment);
+    }
+  }
+
+  // h1 { @include adjust-vertical-alignment(5px, $content-adjustment); }
+  // h2 { @include adjust}
+
+  // .post__date {
+  //   @include adjust-vertical-alignment(7px, $content-adjustment);
+  // }
+
+  // // Block-y elements
+  // img, code, hr, ul, ol {
+  //   @include adjust-vertical-alignment(0, $content-adjustment);
+  // }
 }

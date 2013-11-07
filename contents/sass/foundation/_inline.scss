@@ -8,15 +8,6 @@
   @include text();
 }
 
-@mixin link-color($normal, $hover: false) {
-  color: $normal;
-
-  @if $hover {
-    &:hover {
-      color: $hover;
-    }
-  }
-} 
 
 @mixin link-decoration($type) {
   @if $type == 'inverted' {
@@ -59,13 +50,21 @@ body {
 
 a {
   @extend %link-decoration-inverted;
-  @include link-color(color(text-link), color(text-link-hover));
+  @include link-colors(color(text-link), color(text-link-hover));
+}
+
+@mixin caps {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 @mixin small-caps($size: font-size(small)) {
   @include adjust-font-size-to($size);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  @include caps;
+}
+
+%caps {
+  @include caps;
 }
 
 %small-caps {

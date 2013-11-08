@@ -8,16 +8,22 @@ I'm a web and iOS developer, currently located in Gainesville, Florida. I'm an i
 
 This is my personal website. Sometimes I write things and publish them here. Topics include technology, movies, and occasionally some current events and politics. For more context, [start here](/2013/11/06/four-point-oh/).
 
+## Get in touch
+
+* [@acdlite](https://twitter.com/acdlite)
+* [hi@andrewphilipclark.com](mailto:hi@andrewphilipclark.com)
+
 ## How it's made
 
-This site is built using [Wintersmith](http://wintersmith.io), a static-site generator powered by [Node.js](http://nodejs.org). Other tools include:
+This site is built using [Wintersmith](http://wintersmith.io), a static-site generator powered by [Node.js](http://nodejs.org), and hosted in an [Amazon S3](http://aws.amazon.com/s3/) bucket. Other tools include:
 
 * [Sass](http://sass-lang.com), a CSS extension language and pre-processor.
 * [Compass](http://compass-style.org), a Sass stylesheet framework.
 * [Susy](http://susy.oddbird.net), a Compass plugin for responsive grids.
 * [CoffeeScript](http://coffeescript.org), a programming language that compiles to JavaScript.
-* [Grunt](http://gruntjs.com), a task runner for JavaScript
-* [Git](http://git-scm.com), for version control
+* [Jade](http://jade-lang.com), a Node templating language.
+* [Grunt](http://gruntjs.com), a task runner for JavaScript.
+* [Git](http://git-scm.com), for version control.
 
 Check out the source code at this site's [GitHub](https://github.com/acdlite/andrewphilipclark.com) repo.
 

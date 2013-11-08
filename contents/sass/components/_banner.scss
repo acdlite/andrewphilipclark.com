@@ -1,4 +1,5 @@
 $rainbow: color(red), color(blue), color(yellow), color(red), color(blue);
+$rainbow-length: length($rainbow);
 $duration: length($rainbow) * 5s;
 $delay: 2s;
 
@@ -11,15 +12,17 @@ $delay: 2s;
 
   .rainbow {
     height: 100%;
-    width: 100% * length($rainbow);
+    width: 100% * $rainbow-length;
     position: absolute;
 
     @include background-image(linear-gradient(left, $rainbow));
     @include animation(rainbow $duration $delay infinite alternate linear);
+
+    -webkit-transform: translate3d(0, 0, 0);
   }
 }
 
 @include keyframes(rainbow) {
   from { left: 0%; }
-  to { left: -100% * (length($rainbow) - 1) }
+  to { left: -100% * ($rainbow-length - 1) }
 }

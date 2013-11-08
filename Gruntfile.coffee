@@ -16,11 +16,14 @@ module.exports = (grunt) ->
         cssDir: 'css'
         imagesDir: 'images'
         fontsDir: 'fonts'
+        bundleExec: true
         require: ['susy', 'breakpoint']
       preview:
-        outputStyle: 'expanded'
+        options:
+          environment: 'development'
       production:
-        outputStyle: 'compressed'
+        options:
+          environment: 'production'
 
     extend:
       options:
@@ -61,6 +64,7 @@ module.exports = (grunt) ->
     clean:
       config: ['./config-staging.json', './config-production.json', './config-preview.json']
       staging: ['./public']
+      sass: ['./contents/.sass-cache']
 
     aws: grunt.file.readJSON 'grunt-aws.json'
     's3-sync':

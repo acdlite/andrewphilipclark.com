@@ -5,7 +5,8 @@
     "typogr": "0.5.x",
     "url": "~0.7.9",
     "marked": "~0.2.10",
-    "grunt-s3-sync": "~0.4.1"
+    "grunt-s3-sync": "~0.4.1",
+    "level": "~0.17.0-1"
   },
   "repository": "none",
   "devDependencies": {

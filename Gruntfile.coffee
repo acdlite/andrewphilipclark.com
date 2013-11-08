@@ -1,6 +1,10 @@
 'use strict'
 
 path = require 'path'
+level = require 'level'
+
+database = level('./s3-sync-cache')
+db = -> database
 
 module.exports = (grunt) ->
   @initConfig
@@ -64,11 +68,12 @@ module.exports = (grunt) ->
         key: '<%= aws.key %>'
         secret: '<%= aws.secret %>'
         bucket: '<%= aws.bucket %>'
+        db: db
       deploy:
         files: [
           {
             root: path.join __dirname, 'deploy'
-            src: ['deploy/**', 'deploy/images/**']
+            src: ['deploy/**', '!deploy/images/**']
             dest: '/'
           },
           {

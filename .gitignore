@@ -3,6 +3,7 @@
 /deploy
 /contents/css
 /contents/js
+/s3-sync-cache
 
 # Node
 lib-cov

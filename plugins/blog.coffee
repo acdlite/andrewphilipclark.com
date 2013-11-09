@@ -22,7 +22,7 @@ module.exports = (env, callback) ->
 
   # register the plugin
   prefix = if options.postsDir then options.postsDir + '/' else ''
-  env.registerContentPlugin 'pages', prefix + '**/*.*(markdown|mkd|md)', BlogpostPage
+  env.registerContentPlugin 'posts', prefix + '**/*.*(markdown|mkd|md)', BlogpostPage
 
   # done!
   callback()

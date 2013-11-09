@@ -7,6 +7,7 @@ $rem-with-px-fallback: true;
 $round-to-nearest-half-line: true;
 
 $brand-font-size: (
+  x-small:              14px,
   small:                16px,
   regular:              $base-font-size,
   large:                24px,
@@ -22,6 +23,7 @@ $brand-font-size: (
 
 $site-font-size: (
   text:                 brand-font-size(regular),
+  code:                 brand-font-size(small),
   h1:                   brand-font-size(x-large),
   h2:                   brand-font-size(large),
   h3:                   brand-font-size(regular),
@@ -42,10 +44,11 @@ $site-font-size: (
   @include adjust-font-size-to(font-size($size));
 }
 
-@import url(//fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic,900italic);
+@import url(//fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic,900italic|Inconsolata);
 
 $brand-font-family: (
-  lato:                 'Lato'
+  lato:                 ("Lato", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif),
+  inconsolata:          ("Inconsolata", Menlo, Monaco, Consolas, monospace)
 );
 
 @function brand-font-family($font) {
@@ -54,7 +57,8 @@ $brand-font-family: (
 
 $site-font-family: (
   text:                 brand-font-family(lato),
-  heading:              brand-font-family(lato)
+  heading:              brand-font-family(lato),
+  monospace:            brand-font-family(inconsolata)                
 );
 
 @function site-font-family($font) {

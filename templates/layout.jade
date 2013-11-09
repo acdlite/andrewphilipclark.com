@@ -12,7 +12,12 @@ html(lang='en')
       title
         block title
           = name
-      link(rel='alternate', href=url+'/feed.xml', type='application/rss+xml', title=description)
+      link(rel='alternate', href=h.url('feed.xml'), type='application/rss+xml', title=description)
+
+      link(rel="apple-touch-icon-precomposed", href=h.image_url('icons/apple-touch-icon-152x152-precomposed.png'))
+      link(rel="shortcut icon", href=h.url("favicon.ico"))
+      meta(name="msapplication-TileColor" content="#222222")
+      meta(name="msapplication-TileImage" content=h.image_url('icons/tileicon.png'))
       
       block styles
         link(rel='stylesheet', href=h.stylesheet_url('main'))

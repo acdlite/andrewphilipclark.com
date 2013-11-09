@@ -17,8 +17,6 @@ $delay: 2s;
 
     @include background-image(linear-gradient(left, $rainbow));
     @include animation(rainbow $duration $delay infinite alternate linear);
-
-    -webkit-transform: translate3d(0, 0, 0);
   }
 }
 

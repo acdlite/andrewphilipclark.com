@@ -24,6 +24,11 @@ p, ul, ol {
   }
 }
 
+pre {
+  @include leader(1);
+  @include trailer(3/2);
+}
+
 h1 {
   @include leader(3/2);
   @include trailer(1);
@@ -60,7 +65,9 @@ $content-adjustment: 8px;
     h1:                                       5px,
     h2:                                       10px,
     ".post__date":                            7px,
-    "img, code, hr":                          0
+    "img, pre, hr":                           0,
+    code:                                     7px,
+    "pre code":                               $content-adjustment
   );
 
   @each $selector, $adjustment in $content-adjustments {
@@ -68,16 +75,4 @@ $content-adjustment: 8px;
       @include adjust-vertical-alignment($adjustment, $content-adjustment);
     }
   }
-
-  // h1 { @include adjust-vertical-alignment(5px, $content-adjustment); }
-  // h2 { @include adjust}
-
-  // .post__date {
-  //   @include adjust-vertical-alignment(7px, $content-adjustment);
-  // }
-
-  // // Block-y elements
-  // img, code, hr, ul, ol {
-  //   @include adjust-vertical-alignment(0, $content-adjustment);
-  // }
 }

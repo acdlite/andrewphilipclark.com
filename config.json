@@ -39,5 +39,10 @@
   },
   "paginator": {
     "perPage": 5
+  },
+  "blog": {
+    "postsDir": "articles",
+    "template": "article.jade",
+    "filenameTemplate": "/:year/:month/:day/:file/index.html"
   }
 }

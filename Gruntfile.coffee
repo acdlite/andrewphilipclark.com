@@ -3,10 +3,13 @@
 path = require 'path'
 level = require 'level'
 
-database = level('./s3-sync-cache')
-db = -> database
-
 module.exports = (grunt) ->
+
+  database = level('./s3-sync-cache')
+  db = -> database
+
+  grunt.log.write grunt.task.current.name
+
   @initConfig
     
     compass:

@@ -2,17 +2,17 @@ $brand-color: (
   // red:                  #cf383a,
   // blue:                 #1f98d4,
   // yellow:               #e4cb14,
-  red:                  #d21a32,
-  blue:                 #186ad4,
-  yellow:               #faed31,
-  white:                #ffffff,
-  almost-white:         #f5f6f6,
-  black:                #000000,
-  almost-black:         #222222,
-  gray:                 #666666,
-  light-gray:           #adadad,
-  very-light-gray:      #e1e1e1,
-  dark-gray:            #424242
+  red:                      #d21a32,
+  blue:                     #186ad4,
+  yellow:                   #faed31,
+  white:                    #ffffff,
+  almost-white:             #f5f6f6,
+  black:                    #000000,
+  almost-black:             #222222,
+  gray:                     #666666,
+  light-gray:               #adadad,
+  very-light-gray:          #e1e1e1,
+  dark-gray:                #424242
 );
 
 // Returns brand color
@@ -21,19 +21,20 @@ $brand-color: (
 }
 
 $site-color: (
-  primary:              brand-color(blue),
-  secondary:            brand-color(red),
-  background:           brand-color(almost-white),
-  text:                 brand-color(dark-gray),
-  text-secondary:       brand-color(gray),
-  text-link:            brand-color(blue),
-  text-link-hover:      brand-color(blue),
-  heading:              brand-color(dark-gray),
-  heading-link:         brand-color(dark-gray),
-  heading-link-hover:   brand-color(blue),
+  primary:                  brand-color(blue),
+  secondary:                brand-color(red),
+  background:               brand-color(almost-white),
+  text:                     brand-color(dark-gray),
+  text-secondary:           brand-color(gray),
+  text-link:                brand-color(blue),
+  text-link-hover:          brand-color(blue),
+  heading:                  brand-color(dark-gray),
+  heading-link:             brand-color(dark-gray),
+  heading-link-hover:       brand-color(blue),
+  code-inline-background:   transparentize(brand-color(yellow), 0.8),
 
-  background-inverted:  brand-color(almost-black),
-  text-inverted:        brand-color(very-light-gray)
+  background-inverted:      brand-color(almost-black),
+  text-inverted:            brand-color(very-light-gray)
 );
 
 // Returns site color

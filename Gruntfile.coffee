@@ -5,11 +5,6 @@ level = require 'level'
 
 module.exports = (grunt) ->
 
-  database = level('./s3-sync-cache')
-  db = -> database
-
-  grunt.log.write grunt.task.current.name
-
   @initConfig
     
     compass:
@@ -75,7 +70,7 @@ module.exports = (grunt) ->
         key: '<%= aws.key %>'
         secret: '<%= aws.secret %>'
         bucket: '<%= aws.bucket %>'
-        db: db
+        db: -> level('./s3-sync-cache')
       deploy:
         files: [
           {

@@ -1,0 +1,27 @@
+{
+  "name": "jquery.asides",
+  "version": "0.1.0",
+  "authors": [
+    "Andrew Clark <hi@andrewphilipclark.com>"
+  ],
+  "description": "Convert Markdown Extra-style footnotes into asides",
+  "main": "lib/jquery.asides.min.js",
+  "keywords": [
+    "asides",
+    "Markdown",
+    "jQuery",
+    "sidenotes",
+    "footnotes"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.2"
+  }
+}

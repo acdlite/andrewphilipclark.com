@@ -22,7 +22,7 @@ html(lang='en')
       block styles
         link(rel='stylesheet', href=h.stylesheet_url('main'))
       block headscripts
-        //- script(src=h.javascript_url('head'))
+        //- script(src=h.url('components/jquery/jquery.min.js'))
         
         if environment == 'preview'
           script(src='http://localhost:1337/livereload.js')
@@ -63,4 +63,5 @@ html(lang='en')
         block footer
           include footer
     block footerscripts
+      //- script(src=h.url('components/jquery.asides/lib/jquery.asides.min.js'))
       //- script(src=h.javascript_url('footer'))

@@ -6,7 +6,16 @@ level = require 'level'
 module.exports = (grunt) ->
 
   @initConfig
-    
+
+    coffee:
+      compile:
+        expand: true
+        cwd: 'contents'
+        src: 'coffee/*.coffee'
+        ext: '.js'
+        flatten: true
+        dest: 'contents/js'
+
     compass:
       options:
         basePath: './contents'
@@ -86,6 +95,7 @@ module.exports = (grunt) ->
         ]
 
 
+  @loadNpmTasks "grunt-contrib-coffee"
   @loadNpmTasks "grunt-contrib-compass"
   @loadNpmTasks "grunt-contrib-watch"
   @loadNpmTasks "grunt-extend"
@@ -94,8 +104,8 @@ module.exports = (grunt) ->
   @loadNpmTasks "grunt-contrib-clean"
   @loadNpmTasks "grunt-s3-sync"
 
-  @registerTask 'deploy', ['clean:staging', 'compass:production', 'extend:production', 'wintersmith:production', 'clean:config', 's3-sync:deploy']
-  @registerTask 'stage', ['clean:staging', 'compass:production', 'extend:staging', 'wintersmith:staging', 'clean:config']
-  @registerTask 'preview', ['extend:preview', 'compass:preview', 'concurrent:preview']
+  @registerTask 'deploy', ['clean:staging', 'compass:production', 'coffee:compile', 'extend:production', 'wintersmith:production', 'clean:config', 's3-sync:deploy']
+  @registerTask 'stage', ['clean:staging', 'compass:production', 'coffee:compile', 'extend:staging', 'wintersmith:staging', 'clean:config']
+  @registerTask 'preview', ['extend:preview', 'compass:preview', 'coffee:compile', 'concurrent:preview']
   
   @registerTask 'default', ['stage']

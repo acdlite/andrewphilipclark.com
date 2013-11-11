@@ -10,8 +10,8 @@ This is my personal website. Sometimes I write things and publish them here. Top
 
 ## Get in touch
 
-* [@acdlite](https://twitter.com/acdlite)
-* [hi@andrewphilipclark.com](mailto:hi@andrewphilipclark.com)
+* [Twitter](https://twitter.com/acdlite)
+* [Email](mailto:hi@andrewphilipclark.com)
 
 ## How it's made
 

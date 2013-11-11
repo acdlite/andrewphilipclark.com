@@ -80,3 +80,15 @@
     float: left;
   }
 }
+
+.post, .page {
+  @include breakpoint(break(large)) {
+    @include use-grid(grid(large)) {
+      aside {
+        @include span(3);
+
+        @include bleed(3 left);
+      }
+    }
+  }
+}

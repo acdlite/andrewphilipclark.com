@@ -13,4 +13,4 @@ block content
         h1.page__title
           a(href=h.url(page.url))!= h.inlineMd(page.title)
       section.page__content
-        != h.typogrify(page.html)
+        != page.html

@@ -1,0 +1,21 @@
+{
+  "name": "andrewphilipclark.com",
+  "version": "0.1.0",
+  "homepage": "https://github.com/acdlite/andrewphilipclark.com",
+  "authors": [
+    "Andrew Clark <acdlite@me.com>"
+  ],
+  "description": "Personal website/blog of Andrew Clark",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery.asides": "/Users/andrewclark/Projects/asides"
+  }
+}

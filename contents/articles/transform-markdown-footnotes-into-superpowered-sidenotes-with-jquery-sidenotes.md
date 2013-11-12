@@ -3,7 +3,7 @@ title: Transform Markdown footnotes into superpowered sidenotes with jQuery.side
 date: 12 November 2013 EST
 ---
 
-Last night I pushed the initial release of jQuery.sidenotes to GitHub.
+Last night I pushed the initial release of jQuery.sidenotes to [GitHub](https://github.com/acdlite/jquery.sidenotes).
 
 jQuery.sidenotes is a new plugin that transforms Markdown-generated footnotes into sidenotes. It works by cloning the original footnote element into a new `aside` element and injecting it into the DOM near its reference in the text. You can then *toggle between footnotes and sidenotes*. This makes it perfect for responsive designs.
 

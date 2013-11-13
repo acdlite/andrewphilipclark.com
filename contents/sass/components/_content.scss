@@ -50,6 +50,13 @@
   *:first-child {
     @include leader(0);
   }
+
+  .update {
+    @extend %clear-fix;
+    background: color(very-light-gray);
+
+    @include rem(padding, rhythm(1/2));
+  }
 }
 
 .post + .post {

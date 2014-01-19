@@ -8,13 +8,17 @@ module.exports = (grunt) ->
   @initConfig
 
     coffee:
-      compile:
+      options:
         expand: true
         cwd: 'contents'
         src: 'coffee/*.coffee'
         ext: '.js'
         flatten: true
         dest: 'contents/js'
+      preview:
+        sourceMap: true
+      production:
+        sourceMap: false
 
     compass:
       options:
@@ -104,8 +108,8 @@ module.exports = (grunt) ->
   @loadNpmTasks "grunt-contrib-clean"
   @loadNpmTasks "grunt-s3-sync"
 
-  @registerTask 'deploy', ['clean:staging', 'compass:production', 'coffee:compile', 'extend:production', 'wintersmith:production', 'clean:config', 's3-sync:deploy']
-  @registerTask 'stage', ['clean:staging', 'compass:production', 'coffee:compile', 'extend:staging', 'wintersmith:staging', 'clean:config']
-  @registerTask 'preview', ['extend:preview', 'compass:preview', 'coffee:compile', 'concurrent:preview']
+  @registerTask 'deploy', ['clean:staging', 'compass:production', 'coffee:production', 'extend:production', 'wintersmith:production', 'clean:config', 's3-sync:deploy']
+  @registerTask 'stage', ['clean:staging', 'compass:production', 'coffee:production', 'extend:staging', 'wintersmith:staging', 'clean:config']
+  @registerTask 'preview', ['extend:preview', 'compass:preview', 'coffee:preview', 'concurrent:preview']
   
   @registerTask 'default', ['stage']

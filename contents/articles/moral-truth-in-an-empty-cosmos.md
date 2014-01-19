@@ -1,0 +1,45 @@
+---
+title: Moral truth in an empty cosmos
+date: 19 January 2014 9:00 EST
+---
+
+Ross Douthat's [recent writings](http://douthat.blogs.nytimes.com/2014/01/13/of-new-atheists-and-noble-lies/?pagewanted=all) on atheism and morality are excellent -- almost maddeningly so, in that they are far more thoughtful than similar attempts by prominent atheists. Douthat, a Catholic, hits a number of great points, but I'd like to focus on his exposure of one of contemporary atheism's many weaknesses: its refusal to grapple with the inherent tension between atheistic materialism and moral realism.
+
+(I don't think that this is a failing of atheism per se, but of specific atheisms with outsize influence on popular discourse -- most notably the New Atheism espoused by Richard Dawkins, Sam Harris, et al.)
+
+As an atheist myself, the paradox of moral truth in an empty cosmos is so on-its-face I can hardly believe we're debating it at all. The real debate, the truly necessary conversation to be had, lies in exploring this tension and its implications in an increasingly secular liberal world. Such a conversation can only occur once the premise -- that theism follows from moral realism; that moral skepticism follows from atheism -- is accepted.
+
+Now, formulating this premise in the way that I have implies a level of certitude I'm hesitant to claim. It's one thing to say that I, an atheist, am a moral skeptic. It's much bolder to say that moral skepticism necessarily follows from atheism. However, I think I can make a convincing argument.
+
+While I am not a theologian or philosopher, I imagine most theists would agree that their epistemological approach to God and religion differs at least somewhat from their approach to other areas of knowledge. (Please correct me if I'm mistaken.) This is how you get evolutionary biologists who believe in Creation, and free-market capitalists with a Catholic concern for social justice. By contrast, most atheists are atheists because they are unwilling to make the leap of faith necessary to justify religious belief. Their epistemological approach is the same for God as it is for physics, biology, or anything else -- including morality.
+
+But before we get to that, let's back up: what is the atheistic approach to epistemology? The Mahers and Gervaises of the world would have you believe it's simply "science" or "reason" or (my least favorite) "rationality," with apparent disregard for the actual, seperate concepts those terms denote. Dawkins's atheist advocacy group is named the "Richard Dawkins Foundation for Reason and Science," the blantant implication being that religion precludes an appreciation for those faculties. The simple fact that both Ayn Rand-style [libertarianism](http://reason.com) and the leftist egalitarianism of many (most?) New Atheists claim "reason" as the bedrock of their ideologies is compelling evidence that reason alone is insufficient as a means toward truth. Good reasoning from bad premises leads to bad conclusions. It is especially baffling that Dawkins, who by all accounts has made enormous contributions to evolutionary science, does such a poor job of making this point.
+
+So if not "reason," then what? I won't pretend to have the definitive answer, but I'd argue for a form of constructivist epistemology. I'm thinking in particular of model-dependent realism, a view of scientific inquiry introduced by physicists Stephen Hawking and Leonard Mlodinow in their 2010 book, [*The Grand Design*](http://content.time.com/time/arts/article/0,8599,2017262,00.html). Naturally, physics provides the best example of how model-dependent realism works and why it's necessary. Physicists have long struggled to formulate a "theory of everything": a single model of the universe that unifies the physics of the small, quantum mechanics, with the physics of the large, general relativity. Both models are elegant, coherent, and enable scientists to make extremely accurate predictions about the physical world. The problem is that they contradict one another -- both cannot be true. A unifying model of physics, if one exists, not only needs to be elegant, but it must match (and presumably exceed) the existing models in explanatory and predictive power, the same way relativity upended Newtonian mechanics a century ago. That even the highly empiricism-driven field of physics is not immune to violent upheaval illustrates the problem with realism. If an objective reality does exist, our concept of reality is limited by our ability to model it:
+
+> *There is no picture- or theory-independent concept of reality.* Instead we adopt a view that we call model-dependent realism: the idea that a physical theory or world picture is a model (generally of a mathematical nature) and a set of rules that connect the elements of the model to observations. This provides a framework with which to interpret modern science. [...]
+>
+> A model is a good model if it:
+> 
+> 1. Is elegant 
+> 2. Contains few arbitrary or adjustable elements 
+> 3. Agrees with and explains all existing observations 
+> 4. Makes detailed predictions about future observations that can disprove or falsify the model if they are not borne out.
+
+This core principle can be applied more generally to truth in other domains. Consider economics. Few would argue that any economics theory represents an objective truth about reality. Captialism is great, but it's not a law of the universe. Because economics makes significant assumptions about human behavior, which violates criterion two above, it's not a good model of reality in the strictest sense. However, we can judge the "truth" of an economics model by its ability to explain past events and, crucially, its ability to make future predictions. This points to how a weaker form of model-dependent realism can be used outside the context of the physical sciences.
+
+Now let's turn to morality. Is it possible to contruct of model of morality that meets these four criteria? I say no. To my thinking, no set of moral laws can possibly be elegant and consistent (criteria 1, 2) while also being satisfactorily explanatory (3) or predictive (4). But even if you *could* contruct such a model, the larger problem is that it's impossible to explain or predict anything about morality without first deciding what the aim of morality actually is. Is it to maximize happiness across as many people as possible? Is it to maximize happiness for the self? Is it to further the aims of your social ingroup? Is it to acheive oneness with God? Good luck searching for the solution in the bottom of your beaker. It seems to me that the only way to answer this question with any definitiveness is to assert a higher purpose, a grander scheme, a reality beyond our own. In other words, you must appeal to the authority of God.
+
+If you're unwilling to do that, the inescapable conclusion is that morals are a human invention: socially-constructed concepts that help us cope with our animal existence. There is truth to morality only to the extent that morality is useful. (Which isn't nothing -- morality is very useful!)
+
+Does this mean atheists have nothing to say about morality? Absolutely not. Even as moral skeptics, we can preach the gospels of love, empathy, and freedom. We can still aim to improve the human condition. But it does mean we must be more humble in our moral assertions.
+
+***
+
+What I've just made (or at least attempted) is an intellectual argument for moral skepticism from the point of view of an atheist. But in fact, I suspect there are far fewer moral skeptics than there are atheists. Furthermore, nobody who calls themselves a moral skeptic truly behaves that way in the course of their lives. We are all moral realists in practice.
+
+That's because our moral behavior isn't determined intellectually. There is an enormous disconnect between moral reasoning and the actual moral decisions we make every single moment of our lives. Moral psychologist Jonathan Haidt's work on this subject is fascinating and thoroughly convincing. In his book *The Righteous Mind*, he explains how we process new ideas and information. Spoiler alert: we're really bad at moral reasoning. "Intuitions come first, strategic reasoning second." Haidt also explores the social and evolutionary basis of our moral values, and how interactions with others shape them over time.
+
+I won't go into detail here, as it exceeds the scope of this post. (I do encourage you to read *The Righteous Mind*. I honestly can't recommend it enough.) But I bring this up because any moral system must reckon with the foundations of our morality and why and how we apply them in actual practice, not merely with carefully constructed arguments in the form of essays and opinion columns.
+
+So when contemporary atheism (hopefully) moves beyond strident moral realism, it should be with a greater respect not only for the limits of our moral knowledge, but for the origins of our moral convictions.
